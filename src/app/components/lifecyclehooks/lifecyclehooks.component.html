@@ -1,0 +1,10 @@
+<p>lifecyclehooks works!</p>
+<input type="text" (blur)="handleData($event)" />
+<br />
+<h3>Simple Form</h3>
+<p>Product Name: <input type="text" [(ngModel)]="name" /></p>
+<p>Product Price: <input type="text" [(ngModel)]="price" /></p>
+<p><button (click)="updateProduct()">Update Product</button></p>
+<app-hookchild [parentData]="data" [product]="product">
+    <b #childContent>This is child content from parent</b>
+</app-hookchild>

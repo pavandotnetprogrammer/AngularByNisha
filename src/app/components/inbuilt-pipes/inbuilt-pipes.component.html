@@ -1,0 +1,29 @@
+<h1 class="text-center">{{pageTitle | titlecase}}</h1>
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">City</th>
+            <th scope="col">Salary</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Age(Custom Pipe)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.name | uppercase}}</td>
+            <td>{{user.city | lowercase}}</td>
+            <!-- <td>{{user.salary | currency:'INR':'code'}}</td> by default $ will show if we don't pass any currency parameters. and also the default is currency symbol, and if we want to show currency code, then we need to specify code as chin parameters, other wise it  will take respective currency symbols -->
+            <td>{{user.salary | currency:'INR':'symbol':'3.3'}}</td>
+            <td>{{user.dob | date:'dd/MM/yyyy'}}</td>
+            <td>{{user.dob | age}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<pre>
+    {{users | json}}
+</pre>
+

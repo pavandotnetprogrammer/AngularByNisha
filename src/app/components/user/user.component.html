@@ -1,0 +1,34 @@
+{{user|json}}
+
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <th scope="col">
+            User Name
+        </th>
+        <td>{{user.username}}</td>
+    </tr>
+    <tr>
+        <th scope="col">
+            Name
+        </th>
+        <td>{{user.name}}</td>
+    </tr>
+    <tr>
+        <th scope="col">
+            Email
+        </th>
+        <td>{{user.email}}</td>
+    </tr>
+</table>
+<div>
+    <b>Implementing Nested routes. i.e routes with Children</b>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="address">Address</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="company">Company</a>
+        </li>
+      </ul>
+      <router-outlet></router-outlet>
+</div>

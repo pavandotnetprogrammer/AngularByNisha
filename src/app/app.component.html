@@ -1,0 +1,63 @@
+<div>
+  <h1>Welcome to Angular</h1>
+  <!-- <a [routerLink]="['/parent']">Parent</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a [routerLink]="['/pipes']">Pipes</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a [routerLink]="['/users']">Users</a> -->
+  <app-notificationboard></app-notificationboard>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">User Management</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/parent']">Parent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/pipes']">Pipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/users']">Users</a>
+          </li>
+          <li class="nav-item">
+            <!-- if we want to specify named router outlets with routing, then we need to specify them under outlets object, and need to use with property binding syntax. -->
+            <a class="nav-link" [routerLink]="['/about',{
+              outlets:{
+                'map':['location'],
+                'feeds':['feedback']
+              }
+            }]">About</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/product">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact</a>
+          </li>
+          <li>
+            <a class="nav-link" routerLink="/viewchild">View Child</a>
+          </li>
+          <li>
+            <a class="nav-link" routerLink="/contentprojection">Content Projection</a>
+          </li>
+          <li>
+            <a class="nav-link" routerLink="/tdf">Template Driven Forms</a>
+          </li>
+          <li>
+            <a class="nav-link" routerLink="/lifecyclehooks">Life Cycle Hooks</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+  <app-binding></app-binding>
+  <app-switch-dir></app-switch-dir>
+  <!-- <app-productdashboard></app-productdashboard> -->
+</div>

@@ -1,0 +1,13 @@
+<h1>{{pageTitle}}</h1>
+<h1>Binding image using interpollation</h1>
+<img src="{{imageUrl}}" alt="myImage" width="200px" height="200px;"/>
+<button disabled="{{btnStatus}}" type="button" style="font-weight: bold;">Click</button>
+<h1>Binding image using property binding</h1>
+<img [src]="imageUrl" alt="myImage" width="200px" height="200px;"/>
+<button [disabled]="btnStatus" type="button" style="font-weight: bold;">Click</button>
+<hr>
+<button type="button" (click)="changeTitle();">Change Title</button>
+<hr>
+<br>
+<input type="text" [(ngModel)]="username"/>
+<h4>Welcome {{username}}</h4>

@@ -1,0 +1,13 @@
+<!-- <p>product-widget works!-{{products.length}}</p> -->
+<div>    
+    <ng-content select=".header"></ng-content>
+    <ng-content></ng-content>
+    <ul class="list-group" *ngFor="let p of products">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{p.name}}
+            <span class="badge bg-primary rounded-pill">{{p.price}}</span>
+        </li>
+    </ul>
+    <ng-content select=".link"></ng-content>
+
+</div>

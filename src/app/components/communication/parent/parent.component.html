@@ -1,0 +1,5 @@
+<div class="h-100 p-5 text-bg-dark rounded-3">
+    <h1>Parent Component</h1>
+    <b>{{dataFromChild}}</b>
+    <app-child [message]="username" (notify)="parentMethod($event)"></app-child>
+</div>

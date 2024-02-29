@@ -1,0 +1,27 @@
+<h1> Ng switch directive in Angular</h1>
+select country:<select (change)="choice($event)">
+    <option>Select Country</option>
+    <option *ngFor="let c of countries" [value]="c.code">{{c.country}}</option>
+</select>
+<br>
+<!-- {{selectedCountry}} -->
+
+<div [ngSwitch]="selectedCountry">
+    <div *ngSwitchCase="'ind'" class="h-100 p-5 text-bg-dark rounded-3">
+        <h1>Indian calling code is +91</h1>
+    </div>
+    <div *ngSwitchCase="'uae'" class="h-100 p-5 text-bg-dark rounded-3">
+        <h1>UAE calling code is +380</h1>
+    </div>
+    <div *ngSwitchCase="'uk'" class="h-100 p-5 text-bg-dark rounded-3">
+        <h1>UK calling code is +44</h1>
+    </div>
+    <div *ngSwitchDefault class="h-100 p-5 text-bg-dark rounded-3">
+        <h1>Select your contry</h1>
+    </div>
+
+</div>
+<div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+  </div>
+  

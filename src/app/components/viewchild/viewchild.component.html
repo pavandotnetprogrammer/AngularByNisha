@@ -1,0 +1,23 @@
+<div>
+    <h3 class="text-center text-success">View Child</h3>
+    <p #highlight>Displaying data using ViewChild</p>
+    <p #highlight>Displaying data using ViewChild</p>
+    <p #highlight>Displaying data using ViewChild</p>
+</div>
+
+<div>
+    <h3 class="text-center text-success">View Children</h3>
+    <p #highlights>Displaying data using ViewChildren using p</p>
+    <strong #highlights>Displaying data using ViewChildren using strong</strong><br/>
+    <b #highlights>Displaying data using ViewChildren using bold</b><br>
+    <label #highlights>Displaying data using ViewChildren using label</label>
+
+    <hr/>
+    <b>Accessing counter from child component into parent component:- {{child?.counter}}</b>
+    <hr>
+    <button (click)="inc()">Increment</button>
+    <button (click)="dec()">Decrement</button>
+</div>
+<div>
+    <app-counter #childView></app-counter>
+</div>
